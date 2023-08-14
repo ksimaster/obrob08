@@ -39495,6 +39495,7 @@ MonoBehaviour:
   BottomClamp: -30
   CameraAngleOverride: 0
   LockCameraPosition: 0
+  _playerInput: {fileID: 1431538615}
 --- !u!143 &1431538619
 CharacterController:
   m_ObjectHideFlags: 0

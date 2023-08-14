@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
-#if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
-using UnityEngine.InputSystem;
+#if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED && UNITY_WEBGL && UNITY_EDITOR
+    using UnityEngine.InputSystem;
 #endif
+
 
 /* Note: animations are called via the controller for both the character and capsule using animator null checks
  */
@@ -9,7 +10,7 @@ using UnityEngine.InputSystem;
 namespace StarterAssets
 {
     [RequireComponent(typeof(CharacterController))]
-#if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
+#if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED && UNITY_WEBGL && UNITY_EDITOR
     [RequireComponent(typeof(PlayerInput))]
 #endif
     public class ThirdPersonController : MonoBehaviour
@@ -97,10 +98,12 @@ namespace StarterAssets
         private int _animIDJump;
         private int _animIDFreeFall;
         private int _animIDMotionSpeed;
-
-#if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
+        public PlayerInput _playerInput;
+        /*
+#if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED && UNITY_WEBGL && UNITY_EDITOR
         private PlayerInput _playerInput;
 #endif
+*/
         private Animator _animator;
         private CharacterController _controller;
         private StarterAssetsInputs _input;
@@ -114,12 +117,14 @@ namespace StarterAssets
         {
             get
             {
+                           
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED && UNITY_WEBGL && UNITY_EDITOR
                 return _playerInput.currentControlScheme == "KeyboardMouse";
 #else
-                return _playerInput.currentControlScheme == "KeyboardMouse";
-               // return false;
+                //return _playerInput.currentControlScheme == "KeyboardMouse";
+                return false;
 #endif
+
             }
         }
 
@@ -140,10 +145,12 @@ namespace StarterAssets
             _hasAnimator = TryGetComponent(out _animator);
             _controller = GetComponent<CharacterController>();
             _input = GetComponent<StarterAssetsInputs>();
+            
+           
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED && UNITY_WEBGL && UNITY_EDITOR
-            _playerInput = GetComponent<PlayerInput>();
+           // _playerInput = GetComponent<PlayerInput>();
 #else
-            _playerInput = GetComponent<PlayerInput>();
+            //_playerInput = GetComponent<PlayerInput>();
             Debug.Log( "Starter Assets package is missing dependencies. Please use Tools/Starter Assets/Reinstall Dependencies to fix it");
 #endif
 
