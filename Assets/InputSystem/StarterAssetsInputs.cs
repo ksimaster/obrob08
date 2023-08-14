@@ -1,12 +1,12 @@
 using UnityEngine;
-#if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 using UnityEngine.InputSystem;
-#endif
 
 namespace StarterAssets
 {
 	public class StarterAssetsInputs : MonoBehaviour
 	{
+		public GameObject menu;
+		
 		[Header("Character Input Values")]
 		public Vector2 move;
 		public Vector2 look;
@@ -20,7 +20,6 @@ namespace StarterAssets
 		public bool cursorLocked = true;
 		public bool cursorInputForLook = true;
 
-#if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 		public void OnMove(InputValue value)
 		{
 			MoveInput(value.Get<Vector2>());
@@ -28,7 +27,7 @@ namespace StarterAssets
 
 		public void OnLook(InputValue value)
 		{
-			if(cursorInputForLook)
+			if (cursorInputForLook)
 			{
 				LookInput(value.Get<Vector2>());
 			}
@@ -36,6 +35,7 @@ namespace StarterAssets
 
 		public void OnJump(InputValue value)
 		{
+			Debug.Log("Jump");
 			JumpInput(value.isPressed);
 		}
 
@@ -43,13 +43,19 @@ namespace StarterAssets
 		{
 			SprintInput(value.isPressed);
 		}
-#endif
 
+		public void OnMenu(InputValue value)
+		{
+			Debug.Log("Here");
+			var newActiveState = !menu.active;
+			menu.SetActive(newActiveState);
+			SetCursorState(!newActiveState);
+		}
 
 		public void MoveInput(Vector2 newMoveDirection)
 		{
 			move = newMoveDirection;
-		} 
+		}
 
 		public void LookInput(Vector2 newLookDirection)
 		{
@@ -77,5 +83,5 @@ namespace StarterAssets
 		}
 
 	}
-	
+
 }

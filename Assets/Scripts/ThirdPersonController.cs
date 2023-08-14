@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
-#if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED && UNITY_WEBGL && UNITY_EDITOR
-    using UnityEngine.InputSystem;
-#endif
+using UnityEngine.InputSystem;
 
 
 /* Note: animations are called via the controller for both the character and capsule using animator null checks
@@ -10,9 +8,7 @@
 namespace StarterAssets
 {
     [RequireComponent(typeof(CharacterController))]
-#if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED && UNITY_WEBGL && UNITY_EDITOR
     [RequireComponent(typeof(PlayerInput))]
-#endif
     public class ThirdPersonController : MonoBehaviour
     {
         [Header("Player")]
@@ -99,11 +95,7 @@ namespace StarterAssets
         private int _animIDFreeFall;
         private int _animIDMotionSpeed;
         public PlayerInput _playerInput;
-        /*
-#if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED && UNITY_WEBGL && UNITY_EDITOR
-        private PlayerInput _playerInput;
-#endif
-*/
+
         private Animator _animator;
         private CharacterController _controller;
         private StarterAssetsInputs _input;
@@ -116,15 +108,8 @@ namespace StarterAssets
         private bool IsCurrentDeviceMouse
         {
             get
-            {
-                           
-#if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED && UNITY_WEBGL && UNITY_EDITOR
+            {                        
                 return _playerInput.currentControlScheme == "KeyboardMouse";
-#else
-                //return _playerInput.currentControlScheme == "KeyboardMouse";
-                return false;
-#endif
-
             }
         }
 
@@ -147,12 +132,9 @@ namespace StarterAssets
             _input = GetComponent<StarterAssetsInputs>();
             
            
-#if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED && UNITY_WEBGL && UNITY_EDITOR
-           // _playerInput = GetComponent<PlayerInput>();
-#else
+            _playerInput = GetComponent<PlayerInput>();
             //_playerInput = GetComponent<PlayerInput>();
             Debug.Log( "Starter Assets package is missing dependencies. Please use Tools/Starter Assets/Reinstall Dependencies to fix it");
-#endif
 
             AssignAnimationIDs();
 
