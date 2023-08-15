@@ -5,6 +5,12 @@ using UnityEngine;
 public class SavePoint : MonoBehaviour
 {
 
+    public GameObject panelSave;
+
+    private void Start()
+    {
+        panelSave.SetActive(false);
+    }
 
     private void OnTriggerEnter(Collider col)
     {
@@ -16,9 +22,17 @@ public class SavePoint : MonoBehaviour
             {
                 PlayerPrefs.SetInt("SpawnPoint", int.Parse(gameObject.name));
                 PlayerPrefs.SetInt("SaveTime", PlayerPrefs.GetInt("Time"));
+                panelSave.SetActive(true);
+                StartCoroutine(ClosePanelSave());
             }
             
             Debug.Log(PlayerPrefs.GetInt("SpawnPoint"));
         }
+    }
+
+    IEnumerator ClosePanelSave()
+    {
+        yield return new WaitForSeconds(2f);
+        panelSave.SetActive(false);
     }
 }
