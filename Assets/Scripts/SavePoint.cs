@@ -21,7 +21,7 @@ public class SavePoint : MonoBehaviour
             if(int.Parse(gameObject.name) > PlayerPrefs.GetInt("SpawnPoint"))
             {
                 PlayerPrefs.SetInt("SpawnPoint", int.Parse(gameObject.name));
-                PlayerPrefs.SetInt("SaveTime", PlayerPrefs.GetInt("Time"));
+                PlayerPrefs.SetFloat("SaveTime", PlayerPrefs.GetFloat("Time"));
                 panelSave.SetActive(true);
                 StartCoroutine(ClosePanelSave());
             }
