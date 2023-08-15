@@ -6,6 +6,7 @@ public class LoadPoint : MonoBehaviour
 {
     public GameObject[] points;
     public GameObject player;
+  
 
     private void Awake()
     {
@@ -14,8 +15,10 @@ public class LoadPoint : MonoBehaviour
     }
     void Start()
     {
+        
         Debug.Log(PlayerPrefs.GetInt("SpawnPoint"));
         player.transform.position = new Vector3(points[PlayerPrefs.GetInt("SpawnPoint")].transform.position.x, points[PlayerPrefs.GetInt("SpawnPoint")].transform.position.y, points[PlayerPrefs.GetInt("SpawnPoint")].transform.position.z);
+        
     }
 
 }

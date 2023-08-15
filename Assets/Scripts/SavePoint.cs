@@ -6,6 +6,7 @@ public class SavePoint : MonoBehaviour
 {
 
     public GameObject panelSave;
+    private GameObject ancor;
 
     private void Start()
     {
@@ -25,7 +26,10 @@ public class SavePoint : MonoBehaviour
                 panelSave.SetActive(true);
                 StartCoroutine(ClosePanelSave());
             }
-            
+            ancor = transform.parent.GetChild(2).transform.gameObject;
+            col.gameObject.transform.LookAt(ancor.transform);
+            //col.gameObject.transform.parent.GetChild(1).LookAt(ancor.transform);
+            //col.gameObject.CompareTag("Player")
             Debug.Log(PlayerPrefs.GetInt("SpawnPoint"));
         }
     }
