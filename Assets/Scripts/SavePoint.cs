@@ -12,7 +12,12 @@ public class SavePoint : MonoBehaviour
         if (col.gameObject.CompareTag("Player"))
         {
             Debug.Log("Игрок вступил на точку сохранения!");
-            PlayerPrefs.SetInt("SpawnPoint", int.Parse(gameObject.name));
+            if(int.Parse(gameObject.name) >= PlayerPrefs.GetInt("SpawnPoint"))
+            {
+                PlayerPrefs.SetInt("SpawnPoint", int.Parse(gameObject.name));
+                PlayerPrefs.SetInt("SaveTime", PlayerPrefs.GetInt("Time"));
+            }
+            
             Debug.Log(PlayerPrefs.GetInt("SpawnPoint"));
         }
     }

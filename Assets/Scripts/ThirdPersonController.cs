@@ -134,7 +134,7 @@ namespace StarterAssets
            
             _playerInput = GetComponent<PlayerInput>();
             //_playerInput = GetComponent<PlayerInput>();
-            Debug.Log( "Starter Assets package is missing dependencies. Please use Tools/Starter Assets/Reinstall Dependencies to fix it");
+            //Debug.Log( "Starter Assets package is missing dependencies. Please use Tools/Starter Assets/Reinstall Dependencies to fix it");
 
             AssignAnimationIDs();
 
