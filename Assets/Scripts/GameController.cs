@@ -17,8 +17,8 @@ public class GameController : MonoBehaviour
     void Start()
     {
         Debug.Log("Cохраненное время в начале: " + PlayerPrefs.GetFloat("SaveTime"));
-        if (PlayerPrefs.HasKey("SaveTime")) PlayerPrefs.SetFloat("SaveTime", 0);
-        if (PlayerPrefs.HasKey("Time")) PlayerPrefs.SetFloat("Time", 0);
+        if (!PlayerPrefs.HasKey("SaveTime")) PlayerPrefs.SetFloat("SaveTime", 0);
+        if (!PlayerPrefs.HasKey("Time")) PlayerPrefs.SetFloat("Time", 0);
         PlayerPrefs.SetFloat("Time", PlayerPrefs.GetFloat("SaveTime"));
         CheckUI();
     }
