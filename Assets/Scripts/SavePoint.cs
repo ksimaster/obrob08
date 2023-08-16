@@ -6,13 +6,13 @@ public class SavePoint : MonoBehaviour
 {
 
     public GameObject panelSave;
-    private GameObject ancor;
+    //private GameObject ancor;
     private GameObject arrow;
     private void Start()
     {
         panelSave.SetActive(false);
-        ancor = transform.parent.GetChild(2).transform.gameObject;
-        arrow = transform.parent.GetChild(3).transform.gameObject;
+        //ancor = transform.parent.GetChild(2).transform.gameObject;
+        arrow = transform.parent.GetChild(2).transform.gameObject;
         if (int.Parse(gameObject.name) <= PlayerPrefs.GetInt("SpawnPoint"))
         {
             arrow.SetActive(false);
@@ -34,7 +34,7 @@ public class SavePoint : MonoBehaviour
                 arrow.SetActive(false);
             }
             
-            col.gameObject.transform.LookAt(ancor.transform);
+           // col.gameObject.transform.LookAt(ancor.transform);
             
 
             //col.gameObject.transform.parent.GetChild(1).LookAt(ancor.transform);
