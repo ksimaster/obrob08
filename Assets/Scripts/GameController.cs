@@ -33,12 +33,14 @@ public class GameController : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene("Game");
+        // gameObject.GetComponent<LoadPoint>().Spawn();
     }
 
     public void StartGame()
     {
         StartCoroutine(Timer());
     }
+
     IEnumerator Timer()
     {
         var i = 0;
