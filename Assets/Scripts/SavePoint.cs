@@ -7,10 +7,16 @@ public class SavePoint : MonoBehaviour
 
     public GameObject panelSave;
     private GameObject ancor;
-
+    private GameObject arrow;
     private void Start()
     {
         panelSave.SetActive(false);
+        ancor = transform.parent.GetChild(2).transform.gameObject;
+        arrow = transform.parent.GetChild(3).transform.gameObject;
+        if (int.Parse(gameObject.name) <= PlayerPrefs.GetInt("SpawnPoint"))
+        {
+            arrow.SetActive(false);
+        }
     }
 
     private void OnTriggerEnter(Collider col)
@@ -25,9 +31,12 @@ public class SavePoint : MonoBehaviour
                 PlayerPrefs.SetFloat("SaveTime", PlayerPrefs.GetFloat("Time"));
                 panelSave.SetActive(true);
                 StartCoroutine(ClosePanelSave());
+                arrow.SetActive(false);
             }
-            ancor = transform.parent.GetChild(2).transform.gameObject;
+            
             col.gameObject.transform.LookAt(ancor.transform);
+            
+
             //col.gameObject.transform.parent.GetChild(1).LookAt(ancor.transform);
             //col.gameObject.CompareTag("Player")
             Debug.Log(PlayerPrefs.GetInt("SpawnPoint"));
