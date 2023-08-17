@@ -124,7 +124,7 @@ public class GameController : MonoBehaviour
     }
     public void ShowGetPoint()
     {
-        pointText.text = PlayerPrefs.GetInt("SpawnPoint").ToString() + " из 40";
+        pointText.text = PlayerPrefs.GetInt("SpawnPoint").ToString() + "/45";
     }
 
     public void StopTime()
