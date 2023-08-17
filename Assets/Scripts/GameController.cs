@@ -34,8 +34,8 @@ public class GameController : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene("Game");
-        // gameObject.GetComponent<LoadPoint>().Spawn();
+        // SceneManager.LoadScene("Game");
+        gameObject.GetComponent<LoadPoint>().Spawn();
     }
 
     public void StartGame()
