@@ -33,7 +33,7 @@ public class LoadPoint : MonoBehaviour
     {
         Debug.Log(PlayerPrefs.GetInt("SpawnPoint"));
         var spawnPointPosition = points[PlayerPrefs.GetInt("SpawnPoint")].transform.position;
-        var anchorPosition = points[PlayerPrefs.GetInt("SpawnPoint")].transform.parent.GetChild(2).position;
+        var anchorPosition = points[PlayerPrefs.GetInt("SpawnPoint")].transform.parent.GetChild(3).position;
         player.transform.position = new Vector3(spawnPointPosition.x, spawnPointPosition.y, spawnPointPosition.z);
         player.transform.LookAt(anchorPosition);
         var cam = GameObject.FindGameObjectWithTag("CinemachineTarget");

@@ -19,6 +19,7 @@ public class Death : MonoBehaviour
             {
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
+                gameObject.SetActive(true);
             } 
             // дописать отключалки времени, взаимодействия и т.п.
         }
