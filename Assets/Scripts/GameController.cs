@@ -21,6 +21,8 @@ public class GameController : MonoBehaviour
         if (!PlayerPrefs.HasKey("Time")) PlayerPrefs.SetFloat("Time", 0);
         PlayerPrefs.SetFloat("Time", PlayerPrefs.GetFloat("SaveTime"));
         CheckUI();
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     void Update()

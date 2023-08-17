@@ -12,9 +12,11 @@ public class LoadPoint : MonoBehaviour
     {
         //if (!PlayerPrefs.HasKey("SpawnPoint")) PlayerPrefs.SetInt("SpawnPoint", -1);
         if (!PlayerPrefs.HasKey("SpawnPoint")) PlayerPrefs.SetInt("SpawnPoint", 0);
+        Spawn();
     }
     void Start()
     {
+        
         Spawn();
 
         /*
@@ -31,6 +33,7 @@ public class LoadPoint : MonoBehaviour
 
     public void Spawn()
     {
+        Time.timeScale = 1;
         Debug.Log(PlayerPrefs.GetInt("SpawnPoint"));
         var spawnPointPosition = points[PlayerPrefs.GetInt("SpawnPoint")].transform.position;
         var anchorPosition = points[PlayerPrefs.GetInt("SpawnPoint")].transform.parent.GetChild(3).position;
