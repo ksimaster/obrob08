@@ -17,6 +17,7 @@ public class SavePoint : MonoBehaviour
         {
             arrow.SetActive(false);
         }
+        
     }
 
     private void OnTriggerEnter(Collider col)

@@ -7,8 +7,8 @@ using Cinemachine;
 public class Death : MonoBehaviour
 {
     public GameObject panelDeath;
-    //public GameObject gameController;
-    //public GameObject player;
+    public GameObject gameController;
+    //public GameObject playerArmature;
 
 
     private GameObject scene;
@@ -51,10 +51,21 @@ public class Death : MonoBehaviour
             // transform.parent.transform.GetChild(2).gameObject.SetActive(true);
             // scene.transform.position += transform.position - spawnPointPosition;
             //SceneManager.LoadScene("Game");
-            SceneManager.LoadSceneAsync("Game");
-            StopAllCoroutines();
-           // Time.timeScale = 0;
-           // panelDeath.SetActive(true);
+            gameObject.GetComponent<CharacterController>().enabled = false;
+            gameController.GetComponent<LoadPoint>().Spawn();
+            //gameController.GetComponent<GameController>().StopCoroutine(Timer());
+            Time.timeScale = 0;
+            panelDeath.SetActive(true);
+            Debug.Log("Значение сохраненного времени: " + PlayerPrefs.GetFloat("SaveTime"));
+
+
+            // SceneManager.LoadSceneAsync("Game");
+
+
+
+
+            // Time.timeScale = 0;
+            // panelDeath.SetActive(true);
             if (panelDeath.activeSelf) 
             {
                 Cursor.lockState = CursorLockMode.None;

@@ -9,15 +9,20 @@ public class GameController : MonoBehaviour
     public TMP_Text timerText;
     public TMP_Text pointText;
     public GameObject mainMenu;
+    public GameObject panelDeath;
 
     private float time = 0f;
     private float hours = 0f;
     private float minutes = 0f;
     private float seconds = 0f;
+    private float timer;
+    public int i = 0;
 
     private void Awake()
     {
+        StopCoroutine(Timer());
         StopTime();
+        if (PlayerPrefs.GetInt("SpawnPoint") == 0) PlayerPrefs.SetFloat("SaveTime", 0);
     }
     void Start()
     {
@@ -35,6 +40,8 @@ public class GameController : MonoBehaviour
         ShowTime();
         ShowGetPoint();
         CheckUI();
+        
+
     }
 
 
@@ -46,20 +53,26 @@ public class GameController : MonoBehaviour
 
     public void StartGame()
     {
+        
         StartCoroutine(Timer());
         StartTime();
     }
 
-    IEnumerator Timer()
+
+    public IEnumerator Timer()
     {
-        var i = 0;
-        var timer = PlayerPrefs.GetFloat("SaveTime");
-        while (i == 0)
+        timer = PlayerPrefs.GetFloat("SaveTime");
+        PlayerPrefs.SetFloat("Time", PlayerPrefs.GetFloat("SaveTime"));
+        Debug.Log("Значение таймера перед запуском: " + timer);
+        while (!panelDeath.activeSelf)
         {
+            
             yield return new WaitForSeconds(1f);
             timer += 1;
             PlayerPrefs.SetFloat("Time", timer);
-           // Debug.Log("Преф время: " + PlayerPrefs.GetFloat("Time"));
+            Debug.Log("Преф время: " + PlayerPrefs.GetFloat("Time"));
+
+            
         }
     }
 
