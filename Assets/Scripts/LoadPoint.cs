@@ -32,7 +32,7 @@ public class LoadPoint : MonoBehaviour
         // player.transform.position += new Vector3((anchorPosition.x - spawnPointPosition.x) * f, (anchorPosition.y - spawnPointPosition.y) * f, (anchorPosition.z - spawnPointPosition.z) * f);
 
     }
-    
+    /*
     private void LateUpdate()
     {
         if (i < 1)
@@ -41,6 +41,7 @@ public class LoadPoint : MonoBehaviour
             i += 1;
         }
     }
+    */
     public void Spawn()
     {
         //Time.timeScale = 1;
