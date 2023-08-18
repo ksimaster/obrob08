@@ -7,20 +7,22 @@ using Cinemachine;
 public class Death : MonoBehaviour
 {
     public GameObject panelDeath;
-    public GameObject gameController;
-    public GameObject player;
+    //public GameObject gameController;
+    //public GameObject player;
+
 
     private GameObject scene;
-    
 
     private GameObject[] pointsDeath;
 
     private void Start()
     {
-        pointsDeath = gameController.GetComponent<LoadPoint>().points;
+        //pointsDeath = gameController.GetComponent<LoadPoint>().points;
         //scene = 
     }
-   
+
+
+
     private void OnTriggerEnter(Collider col)
     {
         Debug.Log(col.gameObject.name);
@@ -29,9 +31,12 @@ public class Death : MonoBehaviour
             //Destroy(gameObject);
             //gameObject.SetActive(false);
             //gameController.GetComponent<LoadPoint>().Spawn();
+            /*
             Debug.Log("Номер спаун пойнта: " + PlayerPrefs.GetInt("SpawnPoint"));
             var spawnPointPosition = pointsDeath[PlayerPrefs.GetInt("SpawnPoint")].transform.position;
             Debug.Log("Спаун пойнт позишион: " + spawnPointPosition);
+            */
+
             //transform.position = new Vector3(spawnPointPosition.x, spawnPointPosition.y + 1, spawnPointPosition.z);
             //transform.parent.transform.position = new Vector3(1, 1, 1);
             // Instantiate(player, pointsDeath[PlayerPrefs.GetInt("SpawnPoint")].transform);
@@ -45,7 +50,8 @@ public class Death : MonoBehaviour
             //vcam.OnTargetObjectWarped(transform, pointsDeath[PlayerPrefs.GetInt("SpawnPoint")].transform.position);
             // transform.parent.transform.GetChild(2).gameObject.SetActive(true);
             // scene.transform.position += transform.position - spawnPointPosition;
-            SceneManager.LoadScene("Game");
+            //SceneManager.LoadScene("Game");
+            SceneManager.LoadSceneAsync("Game");
             StopAllCoroutines();
            // Time.timeScale = 0;
            // panelDeath.SetActive(true);

@@ -14,6 +14,11 @@ public class GameController : MonoBehaviour
     private float hours = 0f;
     private float minutes = 0f;
     private float seconds = 0f;
+
+    private void Awake()
+    {
+        StopTime();
+    }
     void Start()
     {
         Debug.Log("Cохраненное время в начале: " + PlayerPrefs.GetFloat("SaveTime"));
@@ -32,6 +37,7 @@ public class GameController : MonoBehaviour
         CheckUI();
     }
 
+
     public void Restart()
     {
         SceneManager.LoadSceneAsync("Game");
@@ -41,6 +47,7 @@ public class GameController : MonoBehaviour
     public void StartGame()
     {
         StartCoroutine(Timer());
+        StartTime();
     }
 
     IEnumerator Timer()
@@ -52,7 +59,7 @@ public class GameController : MonoBehaviour
             yield return new WaitForSeconds(1f);
             timer += 1;
             PlayerPrefs.SetFloat("Time", timer);
-            Debug.Log("Преф время: " + PlayerPrefs.GetFloat("Time"));
+           // Debug.Log("Преф время: " + PlayerPrefs.GetFloat("Time"));
         }
     }
 
