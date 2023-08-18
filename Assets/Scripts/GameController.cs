@@ -66,13 +66,10 @@ public class GameController : MonoBehaviour
         Debug.Log("Значение таймера перед запуском: " + timer);
         while (!panelDeath.activeSelf)
         {
-            
             yield return new WaitForSeconds(1f);
             timer += 1;
             PlayerPrefs.SetFloat("Time", timer);
             Debug.Log("Преф время: " + PlayerPrefs.GetFloat("Time"));
-
-            
         }
     }
 
