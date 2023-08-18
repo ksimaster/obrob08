@@ -49,10 +49,9 @@ public class LoadPoint : MonoBehaviour
         var anchorPosition = points[PlayerPrefs.GetInt("SpawnPoint")].transform.parent.GetChild(3).position;
         player.transform.position = new Vector3(spawnPointPosition.x, spawnPointPosition.y, spawnPointPosition.z);
         player.transform.LookAt(anchorPosition);
-        var cam = GameObject.FindGameObjectWithTag("CinemachineTarget");
-        cam.transform.LookAt(anchorPosition);
+       // var cam = GameObject.FindGameObjectWithTag("CinemachineTarget");
+       // cam.transform.LookAt(anchorPosition);
         player.GetComponent<CharacterController>().enabled = true;
-       
     }
 
 }
