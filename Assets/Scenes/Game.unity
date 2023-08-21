@@ -3756,7 +3756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bca6cd1b8d603a3468ef47006920431c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: {x: 0, y: 0.5, z: 0}
+  rotationSpeed: {x: 0, y: 0.25, z: 0}
 --- !u!4 &81397108 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7602092272814760958, guid: 4786e46fcd283bd46a67a69e9afe6d7a,
@@ -8313,7 +8313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bca6cd1b8d603a3468ef47006920431c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: {x: 0, y: 1, z: 0}
+  rotationSpeed: {x: 0, y: 0.25, z: 0}
 --- !u!23 &178159281
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8508,7 +8508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bca6cd1b8d603a3468ef47006920431c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: {x: 0, y: 0, z: 0.5}
+  rotationSpeed: {x: 0, y: 0, z: 0.25}
 --- !u!65 &181908365
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16059,7 +16059,7 @@ PrefabInstance:
     - target: {fileID: 2131199665755212847, guid: 6d377c23997245ad99a254d65b7072f2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 163.66
+      value: 162.62
       objectReference: {fileID: 0}
     - target: {fileID: 2131199665755212847, guid: 6d377c23997245ad99a254d65b7072f2,
         type: 3}
@@ -16069,7 +16069,7 @@ PrefabInstance:
     - target: {fileID: 2131199665755212847, guid: 6d377c23997245ad99a254d65b7072f2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 102.24
+      value: 101.11
       objectReference: {fileID: 0}
     - target: {fileID: 2131199665755212847, guid: 6d377c23997245ad99a254d65b7072f2,
         type: 3}
@@ -20380,7 +20380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bca6cd1b8d603a3468ef47006920431c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: {x: 0, y: 0, z: 1}
+  rotationSpeed: {x: 0, y: 0, z: 0.25}
 --- !u!65 &501858981
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26057,7 +26057,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bca6cd1b8d603a3468ef47006920431c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: {x: 0, y: 0, z: 0.5}
+  rotationSpeed: {x: 0, y: 0, z: 0.25}
 --- !u!65 &638888344
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26838,7 +26838,7 @@ PrefabInstance:
     - target: {fileID: 2131199665755212847, guid: 6d377c23997245ad99a254d65b7072f2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 160.94
+      value: 160.8
       objectReference: {fileID: 0}
     - target: {fileID: 2131199665755212847, guid: 6d377c23997245ad99a254d65b7072f2,
         type: 3}
@@ -26848,7 +26848,7 @@ PrefabInstance:
     - target: {fileID: 2131199665755212847, guid: 6d377c23997245ad99a254d65b7072f2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 101.69
+      value: 99.99
       objectReference: {fileID: 0}
     - target: {fileID: 2131199665755212847, guid: 6d377c23997245ad99a254d65b7072f2,
         type: 3}
@@ -29825,7 +29825,7 @@ PrefabInstance:
     - target: {fileID: 2131199665755212847, guid: 6d377c23997245ad99a254d65b7072f2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 161.57
+      value: 160.86
       objectReference: {fileID: 0}
     - target: {fileID: 2131199665755212847, guid: 6d377c23997245ad99a254d65b7072f2,
         type: 3}
@@ -29835,7 +29835,7 @@ PrefabInstance:
     - target: {fileID: 2131199665755212847, guid: 6d377c23997245ad99a254d65b7072f2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 103.3
+      value: 101.69
       objectReference: {fileID: 0}
     - target: {fileID: 2131199665755212847, guid: 6d377c23997245ad99a254d65b7072f2,
         type: 3}
@@ -31044,7 +31044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bca6cd1b8d603a3468ef47006920431c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: {x: 0, y: 1, z: 0}
+  rotationSpeed: {x: 0, y: 0.25, z: 0}
 --- !u!23 &754451927
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -32229,7 +32229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bca6cd1b8d603a3468ef47006920431c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: {x: 0, y: -0.5, z: 0}
+  rotationSpeed: {x: 0, y: -0.25, z: 0}
 --- !u!4 &785034987 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7602092272814760958, guid: 4786e46fcd283bd46a67a69e9afe6d7a,
@@ -46662,7 +46662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bca6cd1b8d603a3468ef47006920431c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: {x: 0, y: 0, z: 0.5}
+  rotationSpeed: {x: 0, y: 0, z: 0.25}
 --- !u!65 &1082284107
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48217,7 +48217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bca6cd1b8d603a3468ef47006920431c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: {x: 0, y: 1, z: 0}
+  rotationSpeed: {x: 0, y: 0.25, z: 0}
 --- !u!23 &1112254377
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -50704,7 +50704,7 @@ PrefabInstance:
     - target: {fileID: 2131199665755212847, guid: 6d377c23997245ad99a254d65b7072f2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 161.17
+      value: 161.7
       objectReference: {fileID: 0}
     - target: {fileID: 2131199665755212847, guid: 6d377c23997245ad99a254d65b7072f2,
         type: 3}
@@ -50714,7 +50714,7 @@ PrefabInstance:
     - target: {fileID: 2131199665755212847, guid: 6d377c23997245ad99a254d65b7072f2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 99.06
+      value: 98.73
       objectReference: {fileID: 0}
     - target: {fileID: 2131199665755212847, guid: 6d377c23997245ad99a254d65b7072f2,
         type: 3}
@@ -53798,7 +53798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bca6cd1b8d603a3468ef47006920431c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: {x: 0, y: 0, z: 1}
+  rotationSpeed: {x: 0, y: 0, z: 0.25}
 --- !u!65 &1237471895
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -55432,7 +55432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bca6cd1b8d603a3468ef47006920431c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: {x: 0, y: 0.5, z: 0}
+  rotationSpeed: {x: 0, y: 0.25, z: 0}
 --- !u!4 &1267180986 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7602092272814760958, guid: 4786e46fcd283bd46a67a69e9afe6d7a,
@@ -60928,7 +60928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bca6cd1b8d603a3468ef47006920431c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: {x: 0, y: 0, z: 1}
+  rotationSpeed: {x: 0, y: 0, z: 0.25}
 --- !u!65 &1405688445
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -80194,7 +80194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bca6cd1b8d603a3468ef47006920431c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: {x: 0, y: 1, z: 0}
+  rotationSpeed: {x: 0, y: 0.25, z: 0}
 --- !u!23 &1866926681
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -90736,7 +90736,7 @@ PrefabInstance:
     - target: {fileID: 2131199665755212847, guid: 6d377c23997245ad99a254d65b7072f2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 164.07
+      value: 163.48
       objectReference: {fileID: 0}
     - target: {fileID: 2131199665755212847, guid: 6d377c23997245ad99a254d65b7072f2,
         type: 3}
@@ -90746,7 +90746,7 @@ PrefabInstance:
     - target: {fileID: 2131199665755212847, guid: 6d377c23997245ad99a254d65b7072f2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 99.95
+      value: 99.24
       objectReference: {fileID: 0}
     - target: {fileID: 2131199665755212847, guid: 6d377c23997245ad99a254d65b7072f2,
         type: 3}
