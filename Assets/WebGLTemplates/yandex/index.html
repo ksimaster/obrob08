@@ -116,11 +116,16 @@
     <script>
     var sdk = null;
     var lang = null;
+    var isDevice = null;
     YaGames.init()
     .then(ysdk => {
       console.log('Yandex SDK initialized');
       sdk = ysdk;
       //initPlayer();
+      if(sdk.deviceInfo.isDesktop())
+      {
+          isDevice = 'desktop';
+      }
       showAdInterstitial();
       /*if (!(player.getMode() === 'lite')) 
         {
