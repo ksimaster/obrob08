@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using StarterAssets;
 
 public class GameController : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class GameController : MonoBehaviour
     public TMP_Text pointText;
     public GameObject mainMenu;
     public GameObject panelDeath;
+    public StarterAssetsInputs input;
 
     private float time = 0f;
     private float hours = 0f;
@@ -31,6 +33,7 @@ public class GameController : MonoBehaviour
         if (!PlayerPrefs.HasKey("Time")) PlayerPrefs.SetFloat("Time", 0);
         PlayerPrefs.SetFloat("Time", PlayerPrefs.GetFloat("SaveTime"));
         CheckUI();
+        //CursorOn();
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
@@ -40,10 +43,21 @@ public class GameController : MonoBehaviour
         ShowTime();
         ShowGetPoint();
         CheckUI();
-        
-
     }
 
+    public void CursorOn()
+    {
+        input.SetCursorState(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    public void CursorOff()
+    {
+        input.SetCursorState(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
 
     public void Restart()
     {
@@ -53,11 +67,9 @@ public class GameController : MonoBehaviour
 
     public void StartGame()
     {
-        
         StartCoroutine(Timer());
         StartTime();
     }
-
 
     public IEnumerator Timer()
     {

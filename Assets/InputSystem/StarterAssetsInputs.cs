@@ -47,12 +47,15 @@ namespace StarterAssets
 		public void OnMenu(InputValue value)
 		{
 			Debug.Log("Here");
-			var newActiveState = !menu.active;
+			var newActiveState = !menu.activeSelf;
 			menu.SetActive(newActiveState);
 			SetCursorState(!newActiveState);
-		}
+            Time.timeScale = newActiveState ? 0 : 1;
+            Cursor.visible = newActiveState;
 
-		public void MoveInput(Vector2 newMoveDirection)
+        }
+
+        public void MoveInput(Vector2 newMoveDirection)
 		{
 			move = newMoveDirection;
 		}
@@ -80,7 +83,9 @@ namespace StarterAssets
 		public void SetCursorState(bool newState)
 		{
 			Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.None;
-		}
+            //Cursor.visible = !newState;
+
+        }
 
 	}
 

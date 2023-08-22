@@ -231,7 +231,7 @@
                 {
                     "name": "",
                     "id": "68fc75a1-89d9-4d1f-9fba-049518fec758",
-                    "path": "<Keyboard>/p",
+                    "path": "<Keyboard>/g",
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardMouse;Gamepad;Xbox Controller;PS4 Controller",
