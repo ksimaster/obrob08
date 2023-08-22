@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour
     public TMP_Text pointText;
     public GameObject mainMenu;
     public GameObject panelDeath;
+    public GameObject panelWin;
     public StarterAssetsInputs input;
 
     private float time = 0f;
@@ -43,6 +44,8 @@ public class GameController : MonoBehaviour
         ShowTime();
         ShowGetPoint();
         CheckUI();
+        //Debug.Log(Time.timeScale);
+       // if (panelDeath.activeSelf || panelWin.activeSelf) StopCoroutine(Timer());
     }
 
     public void CursorOn()
@@ -67,8 +70,8 @@ public class GameController : MonoBehaviour
 
     public void StartGame()
     {
-        StartCoroutine(Timer());
         StartTime();
+        StartCoroutine(Timer());
     }
 
     public IEnumerator Timer()
@@ -76,7 +79,7 @@ public class GameController : MonoBehaviour
         timer = PlayerPrefs.GetFloat("SaveTime");
         PlayerPrefs.SetFloat("Time", PlayerPrefs.GetFloat("SaveTime"));
         Debug.Log("Значение таймера перед запуском: " + timer);
-        while (!panelDeath.activeSelf)
+        while (!panelDeath.activeSelf)// || !panelWin.activeSelf)
         {
             yield return new WaitForSeconds(1f);
             timer += 1;

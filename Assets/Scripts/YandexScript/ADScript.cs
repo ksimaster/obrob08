@@ -8,15 +8,18 @@ public class ADScript : MonoBehaviour
 {
     private const float CheckTimer = 150f;
     private const float TimeOffset = 5f;
+    private string lastIsAdsOpen = null;
+
+    
 
 
     //public string nameScene;
-    private string lastIsAdsOpen = null;
-   // private float timer;
 
-   // public TextMeshProUGUI adWarningScene;
-   // public TextMeshProUGUI adWarningSetting;
-   // public TextMeshProUGUI adWarningCategory;
+    // private float timer;
+
+    // public TextMeshProUGUI adWarningScene;
+    // public TextMeshProUGUI adWarningSetting;
+    // public TextMeshProUGUI adWarningCategory;
 
     public void ShareFriend(){
 #if UNITY_WEBGL && !UNITY_EDITOR
@@ -25,22 +28,22 @@ public class ADScript : MonoBehaviour
     }
 
     public void ShowAdInterstitial(){
-
 #if UNITY_WEBGL && !UNITY_EDITOR
     	            WebGLPluginJS.InterstitialFunction();
-#endif
+#endif   
+    }
 
-      
-    }
-/*
-    IEnumerator Courutine(float seconds)
-    {
-        yield return new WaitForSeconds(seconds);
-        adWarningScene.gameObject.SetActive(false);
-        //adWarningSetting.gameObject.SetActive(false);
-        //adWarningCategory.gameObject.SetActive(false);
-    }
-*/
+   
+
+    /*
+        IEnumerator Courutine(float seconds)
+        {
+            yield return new WaitForSeconds(seconds);
+            adWarningScene.gameObject.SetActive(false);
+            //adWarningSetting.gameObject.SetActive(false);
+            //adWarningCategory.gameObject.SetActive(false);
+        }
+    */
     public void ShowAdReward(){
 #if UNITY_WEBGL && !UNITY_EDITOR
     	WebGLPluginJS.RewardFunction();
