@@ -15,7 +15,11 @@ public class TimeActive : MonoBehaviour
     private void Update()
     {
         if (objectForActive.activeSelf) i += 1;
-        if (i > 150) objectForActive.SetActive(false);
+        if (i > 150) 
+        {
+            objectForActive.SetActive(false);
+            i = 0;
+        } 
     }
 
 
