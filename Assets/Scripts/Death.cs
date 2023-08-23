@@ -59,6 +59,7 @@ public class Death : MonoBehaviour
         loseStart.SetActive(true);
         loseShop.SetActive(true);
         loseSetting.SetActive(true);
+        loseProgress.SetActive(true);
         //Time.timeScale = 0;
     }
 

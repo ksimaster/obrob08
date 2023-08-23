@@ -63875,6 +63875,7 @@ MonoBehaviour:
   loseStart: {fileID: 305121387}
   loseShop: {fileID: 1118015678}
   loseSetting: {fileID: 1317523842}
+  loseProgress: {fileID: 1304416016}
 --- !u!136 &1431538622
 CapsuleCollider:
   m_ObjectHideFlags: 0
