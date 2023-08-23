@@ -19,6 +19,7 @@ public class Death : MonoBehaviour
     public GameObject loseStart;
     public GameObject loseShop;
     public GameObject loseSetting;
+    public GameObject loseProgress;
     //public GameObject loseRestart;
 
     private GameObject scene;
@@ -40,6 +41,7 @@ public class Death : MonoBehaviour
         loseStart.SetActive(false);
         loseShop.SetActive(false);
         loseSetting.SetActive(false);
+        loseProgress.SetActive(false);
         adsWinText.text = "Ёто было классно!";
         adsLoseText.text = "Ќе врем€ расстраиватьс€!";
         yield return new WaitForSeconds(1f);
