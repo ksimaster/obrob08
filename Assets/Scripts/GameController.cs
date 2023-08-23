@@ -74,6 +74,13 @@ public class GameController : MonoBehaviour
         StartCoroutine(Timer());
     }
 
+    public void Reset()
+    {
+        var t = PlayerPrefs.GetFloat("OldBest");
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.SetFloat("OldBest", t);
+    }
+
     public IEnumerator Timer()
     {
         timer = PlayerPrefs.GetFloat("SaveTime");
