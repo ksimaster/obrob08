@@ -45,6 +45,7 @@ public class LoadPoint : MonoBehaviour
     public void Spawn()
     {
         //Time.timeScale = 1;
+        player.GetComponent<CharacterController>().enabled = false;
         Debug.Log("Номер точки спауна " + PlayerPrefs.GetInt("SpawnPoint"));
         var spawnPointPosition = points[PlayerPrefs.GetInt("SpawnPoint")].transform.position;
         var anchorPosition = points[PlayerPrefs.GetInt("SpawnPoint")].transform.parent.GetChild(3).position;
