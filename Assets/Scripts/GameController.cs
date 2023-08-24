@@ -76,9 +76,13 @@ public class GameController : MonoBehaviour
 
     public void Reset()
     {
-        var t = PlayerPrefs.GetFloat("OldBest");
-        PlayerPrefs.DeleteAll();
-        PlayerPrefs.SetFloat("OldBest", t);
+       // var t = PlayerPrefs.GetFloat("OldBest");
+        //PlayerPrefs.DeleteAll();
+        //PlayerPrefs.SetFloat("OldBest", t);
+
+        PlayerPrefs.DeleteKey("Time");
+        PlayerPrefs.DeleteKey("SaveTime");
+        PlayerPrefs.DeleteKey("SpawnPoint");
     }
 
     public IEnumerator Timer()
