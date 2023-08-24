@@ -69,7 +69,7 @@ public class Death : MonoBehaviour
         Debug.Log(col.gameObject.name);
         if (col.gameObject.CompareTag("Laser"))
         {
-            gameObject.GetComponent<CharacterController>().enabled = false;
+            //gameObject.GetComponent<CharacterController>().enabled = false;
             gameController.GetComponent<LoadPoint>().Spawn();
             //Time.timeScale = 0;
             panelDeath.SetActive(true);
