@@ -7,6 +7,7 @@ using TMPro;
 
 public class Death : MonoBehaviour
 {
+    public GameObject panelWin;
     public GameObject panelDeath;
     public GameObject gameController;
     //public GameObject playerArmature;
@@ -85,7 +86,7 @@ public class Death : MonoBehaviour
             //gameObject.GetComponent<CharacterController>().enabled = false;
             gameController.GetComponent<LoadPoint>().Spawn();
             //Time.timeScale = 0;
-            panelDeath.SetActive(true);
+            panelWin.SetActive(true);
             Debug.Log("Значение сохраненного времени: " + PlayerPrefs.GetFloat("SaveTime"));
             StartCoroutine(ForAds());
             Cursor.lockState = CursorLockMode.None;
