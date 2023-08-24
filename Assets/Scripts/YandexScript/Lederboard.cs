@@ -3,17 +3,17 @@ using UnityEngine;
 
 public class Lederboard : MonoBehaviour
 {
-    public string nameScene;
+    public GameObject panelWin;
     void Start()
     {
-        if(nameScene == "Menu") SetHighScoreOnLederboard();
-        if (!PlayerPrefs.HasKey("HighScore")) PlayerPrefs.SetInt("HighScore", 0);
+        //if(panelWin.activeSelf) SetHighScoreOnLederboard();
+         if (!PlayerPrefs.HasKey("OldBest")) PlayerPrefs.SetFloat("OldBest", 0);
     }
 
     public void SetHighScoreOnLederboard()
     {
         
-        int best = PlayerPrefs.GetInt("HighScore");
+        int best = PlayerPrefs.GetInt("OldBest");
 #if UNITY_WEBGL && !UNITY_EDITOR
     	WebGLPluginJS.SetLeder(best);
 #endif
@@ -21,17 +21,27 @@ public class Lederboard : MonoBehaviour
 
     public void HighScore()
     {
-        if(PlayerPrefs.GetInt("ScoreMonsters") > PlayerPrefs.GetInt("HighScore"))
+        if(PlayerPrefs.GetFloat("NewBest") < PlayerPrefs.GetFloat("OldBest"))
         {
-            PlayerPrefs.SetInt("HighScore", PlayerPrefs.GetInt("ScoreMonsters"));
-            Debug.Log(PlayerPrefs.GetInt("HighScore"));
+            PlayerPrefs.SetFloat("OldBest", PlayerPrefs.GetFloat("NewBest"));
+            Debug.Log(PlayerPrefs.GetFloat("OldBest"));
+            SetHighScoreOnLederboard();
+        }
+        else
+        {
             SetHighScoreOnLederboard();
         }
     }
 
     private void Update()
     {
-        HighScore();
+        if (panelWin.activeSelf) 
+        {
+            if (PlayerPrefs.GetFloat("OldBest") == 0) PlayerPrefs.SetFloat("OldBest", PlayerPrefs.GetFloat("SaveTime"));
+            PlayerPrefs.SetFloat("NewBest", PlayerPrefs.GetFloat("SaveTime"));
+            HighScore();
+        }
+            
     }
 
 

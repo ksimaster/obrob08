@@ -88,6 +88,7 @@ public class Death : MonoBehaviour
             //Time.timeScale = 0;
             panelWin.SetActive(true);
             Debug.Log("Значение сохраненного времени: " + PlayerPrefs.GetFloat("SaveTime"));
+           // PlayerPrefs.SetFloat("NewBest", PlayerPrefs.GetFloat("SaveTime"));
             StartCoroutine(ForAds());
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;

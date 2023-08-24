@@ -14504,6 +14504,7 @@ GameObject:
   - component: {fileID: 352446446}
   - component: {fileID: 352446448}
   - component: {fileID: 352446447}
+  - component: {fileID: 352446449}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -14774,6 +14775,19 @@ MonoBehaviour:
   buttonJacob: {fileID: 1186606879}
   buttonSparks: {fileID: 889639348}
   buttonDevxero: {fileID: 2070990518}
+--- !u!114 &352446449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352446439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be5c4f890339a8f4e87455ac776b7cf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelWin: {fileID: 388766626}
 --- !u!1001 &353062257
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -65162,6 +65176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f907dc13b49dc40b3ccf12e0013633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  panelWin: {fileID: 388766626}
   panelDeath: {fileID: 899655257}
   gameController: {fileID: 352446439}
   adsWinText: {fileID: 704829597}
