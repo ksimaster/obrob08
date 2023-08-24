@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class Auth : MonoBehaviour
 {
     public GameObject authButton;
-    public GameObject authPanel;
+   // public GameObject authPanel;
     public bool isAuth = false;
 
     public static Auth Instance;
@@ -27,7 +27,7 @@ public class Auth : MonoBehaviour
     void Start()
     {
         authButton.SetActive(!isAuth);
-        authPanel.SetActive(!isAuth);
+        //authPanel.SetActive(!isAuth);
 
     }
     public void Authorization()
@@ -54,7 +54,7 @@ public class Auth : MonoBehaviour
         yield return new WaitForSeconds(3f);
         CheckAuth();
         authButton.SetActive(!isAuth);
-        authPanel.SetActive(!isAuth);
+       // authPanel.SetActive(!isAuth);
         authButton.GetComponent<Button>().interactable = true;
     }
 }
