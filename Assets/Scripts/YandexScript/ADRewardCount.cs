@@ -7,15 +7,25 @@ public class ADRewardCount : MonoBehaviour
 {
     private string lastIsAdsOpen = null;
 
+    public Button selectButton;
+    public GameObject buttonMan;
+    public GameObject buttonGirl;
+    public GameObject buttonSpiderMan;
+    public GameObject buttonGlassGirl;
+    public GameObject buttonJacob;
+    public GameObject buttonSparks;
+    public GameObject buttonDevxero;
 
     void Start()
     {
         ShowAdInterstitial();
+
     }
 
     void Update()
     {
         CheckAds();
+        InteractableButton();
         //if (compCanvasResult.enabled) isCanvasResult = 1;
         //isImageReticle = compImageReticle.enabled ? 1 : 0;
         /*
@@ -48,6 +58,26 @@ public class ADRewardCount : MonoBehaviour
         }
         */
     }
+
+    public void SetPerk(string pref)
+    {
+        PlayerPrefs.SetInt(pref, 1);
+    }
+
+    public void InteractableButton()
+    {
+        /*
+        if(buttonGirl.GetComponent<Image>().enabled || buttonSpiderMan.GetComponent<Image>().enabled || buttonGlassGirl.GetComponent<Image>().enabled || buttonJacob.GetComponent<Image>().enabled || buttonSparks.GetComponent<Image>().enabled || buttonDevxero.GetComponent<Image>().enabled)
+        {
+            selectButton.interactable = false;
+        } */
+        /*else
+        {
+            selectButton.interactable = true;
+        }*/
+        if(buttonMan.activeSelf) selectButton.interactable = true;
+    }
+
     public void ShowAdInterstitial()
     {
 
