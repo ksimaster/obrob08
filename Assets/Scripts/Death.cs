@@ -80,6 +80,19 @@ public class Death : MonoBehaviour
                 //gameObject.SetActive(true);
             // дописать отключалки времени, взаимодействия и т.п.
         }
+        if (col.gameObject.CompareTag("Finish"))
+        {
+            //gameObject.GetComponent<CharacterController>().enabled = false;
+            gameController.GetComponent<LoadPoint>().Spawn();
+            //Time.timeScale = 0;
+            panelDeath.SetActive(true);
+            Debug.Log("Значение сохраненного времени: " + PlayerPrefs.GetFloat("SaveTime"));
+            StartCoroutine(ForAds());
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            //gameObject.SetActive(true);
+            // дописать отключалки времени, взаимодействия и т.п.
+        }
     }
    
  
