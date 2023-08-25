@@ -5,9 +5,15 @@ namespace StarterAssets
 {
 	public class StarterAssetsInputs : MonoBehaviour
 	{
-		public GameObject menu;
-		
-		[Header("Character Input Values")]
+		public GameObject pauseMenu;
+        public GameObject mainMenu;
+        public GameObject winMenu;
+        public GameObject deathMenu;
+        public GameObject shopMenu;
+        public GameObject settingMenu;
+        public GameObject rewardMenu;
+
+        [Header("Character Input Values")]
 		public Vector2 move;
 		public Vector2 look;
 		public bool jump;
@@ -46,13 +52,15 @@ namespace StarterAssets
 
 		public void OnMenu(InputValue value)
 		{
-			Debug.Log("Here");
-			var newActiveState = !menu.activeSelf;
-			menu.SetActive(newActiveState);
-			SetCursorState(!newActiveState);
-            Time.timeScale = newActiveState ? 0 : 1;
-            Cursor.visible = newActiveState;
-
+            if (!mainMenu.activeSelf || !winMenu.activeSelf || !deathMenu.activeSelf || !shopMenu.activeSelf || !settingMenu.activeSelf || !rewardMenu.activeSelf)
+            {
+                Debug.Log("Here");
+                var newActiveState = !pauseMenu.activeSelf;
+                pauseMenu.SetActive(newActiveState);
+                SetCursorState(!newActiveState);
+                Time.timeScale = newActiveState ? 0 : 1;
+                Cursor.visible = newActiveState;
+            }
         }
 
         public void MoveInput(Vector2 newMoveDirection)
