@@ -52,9 +52,8 @@ namespace StarterAssets
 
 		public void OnMenu(InputValue value)
 		{
-            if (!mainMenu.activeSelf || !winMenu.activeSelf || !deathMenu.activeSelf || !shopMenu.activeSelf || !settingMenu.activeSelf || !rewardMenu.activeSelf)
+            if (!mainMenu.activeSelf && !winMenu.activeSelf && !deathMenu.activeSelf && !shopMenu.activeSelf && !settingMenu.activeSelf && !rewardMenu.activeSelf)
             {
-                Debug.Log("Here");
                 var newActiveState = !pauseMenu.activeSelf;
                 pauseMenu.SetActive(newActiveState);
                 SetCursorState(!newActiveState);
