@@ -62,6 +62,18 @@ namespace StarterAssets
             }
         }
 
+        public void OnMenuButton()
+        {
+            if (!mainMenu.activeSelf && !winMenu.activeSelf && !deathMenu.activeSelf && !shopMenu.activeSelf && !settingMenu.activeSelf && !rewardMenu.activeSelf)
+            {
+                var newActiveState = !pauseMenu.activeSelf;
+                pauseMenu.SetActive(newActiveState);
+                SetCursorState(!newActiveState);
+                Time.timeScale = newActiveState ? 0 : 1;
+                Cursor.visible = newActiveState;
+            }
+        }
+
         public void MoveInput(Vector2 newMoveDirection)
 		{
 			move = newMoveDirection;
