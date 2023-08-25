@@ -84,7 +84,7 @@ public class Death : MonoBehaviour
         if (col.gameObject.CompareTag("Finish"))
         {
             //gameObject.GetComponent<CharacterController>().enabled = false;
-            gameController.GetComponent<LoadPoint>().Spawn();
+           // gameController.GetComponent<LoadPoint>().Spawn();
             //Time.timeScale = 0;
             panelWin.SetActive(true);
             Debug.Log("Значение сохраненного времени: " + PlayerPrefs.GetFloat("SaveTime"));
