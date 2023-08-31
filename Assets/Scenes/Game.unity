@@ -97063,10 +97063,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2950164602147888860, guid: 211c2b6fee6bbe3408770172044a86f8,
+        type: 3}
+      propertyPath: m_text
+      value: "\u0420\u041E\u0411\u041E\u041B\u041E\u041A\u0421 \u041E\u0411\u0411\u0418:
+        \u041F\u0410\u0420\u041A\u0423\u0420"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2950164602147888860, guid: 211c2b6fee6bbe3408770172044a86f8,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 59.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 2950164602147888863, guid: 211c2b6fee6bbe3408770172044a86f8,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 142.211
+      objectReference: {fileID: 0}
     - target: {fileID: 2950164602147888863, guid: 211c2b6fee6bbe3408770172044a86f8,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 279
+      value: 304.1161
       objectReference: {fileID: 0}
     - target: {fileID: 2950164603157253200, guid: 211c2b6fee6bbe3408770172044a86f8,
         type: 3}
