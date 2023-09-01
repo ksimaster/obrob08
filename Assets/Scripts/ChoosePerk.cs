@@ -7,13 +7,21 @@ public class ChoosePerk : MonoBehaviour
     
     public GameObject perk;
     public GameObject playerArmature;
-
+    
     private int i = 0;
    
 
     private void Start()
     {
+        i = PlayerPrefs.GetInt("Perk");
+        Debug.Log("Perk на старте " + PlayerPrefs.GetInt("Perk"));
+        for (int j = 0; j < perk.transform.childCount-1; j++)
+        {
+            playerArmature.transform.GetChild(1).transform.GetChild(i).gameObject.SetActive(false); 
+        }
         perk.transform.GetChild(i).gameObject.SetActive(true);
+        Select();
+
     }
 
     public void Next()
@@ -36,6 +44,9 @@ public class ChoosePerk : MonoBehaviour
 
     public void Select()
     {
+        playerArmature.GetComponent<Animator>().avatar = null;
+        PlayerPrefs.SetInt("Perk", i);
+        Debug.Log("Perk на изменении " + PlayerPrefs.GetInt("Perk"));
         playerArmature.transform.GetChild(1).transform.GetChild(i).gameObject.SetActive(true);
         playerArmature.GetComponent<Animator>().avatar = playerArmature.transform.GetChild(1).transform.GetChild(i).GetComponent<Animator>().avatar;
         
