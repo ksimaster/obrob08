@@ -72,6 +72,7 @@ public class Death : MonoBehaviour
         {
             //gameObject.GetComponent<CharacterController>().enabled = false;
             gameController.GetComponent<LoadPoint>().Spawn();
+
             //Time.timeScale = 0;
             panelDeath.SetActive(true);
             Debug.Log("Значение сохраненного времени: " + PlayerPrefs.GetFloat("SaveTime"));

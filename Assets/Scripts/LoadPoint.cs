@@ -53,7 +53,7 @@ public class LoadPoint : MonoBehaviour
         player.transform.LookAt(anchorPosition);
        // var cam = GameObject.FindGameObjectWithTag("CinemachineTarget");
        // cam.transform.LookAt(anchorPosition);
-        player.GetComponent<CharacterController>().enabled = true;
+        //player.GetComponent<CharacterController>().enabled = true;
         PlayerPrefs.SetFloat("Time", PlayerPrefs.GetFloat("SaveTime"));
     }
 
