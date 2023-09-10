@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.6417176, g: 0.866045, b: 0.8808494, a: 1}
+  m_IndirectSpecularColor: {r: 0.64171827, g: 0.86604613, b: 0.88084984, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -14599,6 +14599,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TouchControls: {fileID: 178780182}
   MenuButton: {fileID: 1781415554}
+  mainMenu: {fileID: 1655577764}
+  pausePanel: {fileID: 186128069}
+  winPanel: {fileID: 388766626}
+  deathPanel: {fileID: 899655257}
+  shopPanel: {fileID: 1045557435}
+  rewardPanel: {fileID: 5456393432684573973}
+  settingPanel: {fileID: 1607353056}
 --- !u!114 &352446443
 MonoBehaviour:
   m_ObjectHideFlags: 0
