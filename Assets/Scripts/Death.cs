@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Cinemachine;
 using TMPro;
+using StarterAssets;
 
 public class Death : MonoBehaviour
 {
@@ -71,6 +72,7 @@ public class Death : MonoBehaviour
         if (col.gameObject.CompareTag("Laser"))
         {
             //gameObject.GetComponent<CharacterController>().enabled = false;
+            gameObject.transform.parent.GetChild(3).GetComponent<UICanvasControllerInput>().enabled = false;
             gameController.GetComponent<LoadPoint>().Spawn();
 
             //Time.timeScale = 0;
