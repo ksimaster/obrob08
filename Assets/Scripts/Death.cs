@@ -72,6 +72,7 @@ public class Death : MonoBehaviour
         if (col.gameObject.CompareTag("Laser"))
         {
             //gameObject.GetComponent<CharacterController>().enabled = false;
+            gameObject.transform.parent.GetChild(3).GetComponent<UICanvasControllerInput>().Reset();
             gameObject.transform.parent.GetChild(3).GetComponent<UICanvasControllerInput>().enabled = false;
             gameController.GetComponent<LoadPoint>().Spawn();
 

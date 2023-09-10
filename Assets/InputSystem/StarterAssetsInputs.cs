@@ -106,6 +106,15 @@ namespace StarterAssets
 
         }
 
-	}
+        public void Reset()
+        {
+			SprintInput(false);
+			JumpInput(false);
+			LookInput(Vector2.zero);
+			MoveInput(Vector2.zero);
+
+        }
+
+    }
 
 }

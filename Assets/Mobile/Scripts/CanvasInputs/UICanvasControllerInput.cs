@@ -27,7 +27,15 @@ namespace StarterAssets
         {
             starterAssetsInputs.SprintInput(virtualSprintState);
         }
-        
+
+        public void Reset()
+        {
+            VirtualMoveInput(Vector2.zero);
+            VirtualLookInput(Vector2.zero);
+            VirtualJumpInput(false);
+            VirtualSprintInput(false);
+        }
+
     }
 
 }
